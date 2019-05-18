@@ -14,9 +14,14 @@ public class Player : MonoBehaviour {
         renderer.material.color = GetColorFromType(data.cellType);
     }
 
-    void Update() {
-        transform.localPosition =
-            grid.GetCellCenterLocal((Vector3Int)data.position);
+    void FixedUpdate() {
+        var newPos = grid.GetCellCenterLocal((Vector3Int)data.position);
+        transform.localPosition = Vector3.Lerp(
+            transform.localPosition,
+            newPos,
+            0.1f
+        );
+            
     }
 
     public static Color GetColorFromType(Board.Cell cellType) {
