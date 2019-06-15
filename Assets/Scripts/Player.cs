@@ -38,4 +38,16 @@ public class Player : MonoBehaviour {
                 throw new Exception("No color for " + cellType);
         }
     }
+
+    public void Up()
+        => data.position.y = 1;
+
+    public void Down()
+        => data.position.y -= 1;
+
+    public void Left()
+        => data.position.x -= 1;
+
+    public void Right()
+        => data.position.x += 1;
 }
