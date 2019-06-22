@@ -1,10 +1,20 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour {
 	public DirectionButton direction1, direction2, direction3;
 	public List<Player> players;
 	public static int currentPlayer = 0;
+	public Graphic sheetGraphic;
+
+	public Color[] sheetColors = {
+		Color.blue, Color.red, Color.magenta, Color.yellow
+	};
+
+	void Awake() {
+		UpdateSheetColor();
+	}
 
 	public void Execute() {
 		var player = players[currentPlayer];
@@ -13,6 +23,7 @@ public class PlayerControl : MonoBehaviour {
 		CallDirection(player, direction3.GetDirection());
 		
 		currentPlayer = (currentPlayer + 1) % 4;
+		UpdateSheetColor();
 	}
 
 	void CallDirection(Player player, DirectionButton.Direction dir) {
@@ -31,4 +42,7 @@ public class PlayerControl : MonoBehaviour {
 				break;
 		}
 	}
+
+	void UpdateSheetColor()
+		=> sheetGraphic.color = sheetColors[currentPlayer];
 }

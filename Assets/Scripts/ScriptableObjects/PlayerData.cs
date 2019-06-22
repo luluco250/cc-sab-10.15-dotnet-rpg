@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerData : ScriptableObject {
     public string playerName;
     public Board.Cell cellType;
-    public Vector2Int position;
+    public Vector2Int startPosition, position;
     public int heldBitcoins, baseBitcoins;
-    // Player functions here later.
 }

@@ -1115,10 +1115,16 @@ MonoBehaviour:
   direction2: {fileID: 2004139589}
   direction3: {fileID: 120579396}
   players:
-  - {fileID: 1944912251}
   - {fileID: 1043169401}
+  - {fileID: 1944912251}
   - {fileID: 148318155}
   - {fileID: 708705951}
+  sheetGraphic: {fileID: 862805154}
+  sheetColors:
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &1043169400
 GameObject:
   m_ObjectHideFlags: 0

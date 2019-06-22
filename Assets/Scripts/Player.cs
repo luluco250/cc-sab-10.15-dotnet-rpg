@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
 
     void Awake() {
         renderer = GetComponent<MeshRenderer>();
+        data.position = data.startPosition;
     }
 
     void Start() {
@@ -40,14 +41,14 @@ public class Player : MonoBehaviour {
     }
 
     public void Up()
-        => data.position.y = 1;
+        => data.position.y = Mathf.Clamp(data.position.y + 1, -3, 3);
 
     public void Down()
-        => data.position.y -= 1;
+        => data.position.y = Mathf.Clamp(data.position.y - 1, -3, 3);
 
     public void Left()
-        => data.position.x -= 1;
+        => data.position.x = Mathf.Clamp(data.position.x - 1, -3, 3);
 
     public void Right()
-        => data.position.x += 1;
+        => data.position.x = Mathf.Clamp(data.position.x + 1, -3, 3);
 }
