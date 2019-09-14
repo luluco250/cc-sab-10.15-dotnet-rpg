@@ -14,13 +14,11 @@ public class PlayerControl : MonoBehaviour {
 		Color.blue, Color.red, Color.magenta, Color.yellow
 	};
 
-	void Awake() {
+	void Awake() =>
 		UpdateSheetColor();
-	}
 
-	public void Execute() {
+	public void Execute() =>
 		StartCoroutine(SlowExecute());
-	}
 
 	IEnumerator SlowExecute() {
 		var player = players[currentPlayer];
