@@ -34,6 +34,8 @@ public class PlayerControl : MonoBehaviour {
 
 		CallDirection(player, direction3.GetDirection());
 		yield return new WaitForSeconds(moveDelay);
+
+		++player.data.baseBitcoins;
 		
 		NextPlayer();
 		executeButton.SetActive(true);

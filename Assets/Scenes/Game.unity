@@ -1345,6 +1345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 714152102}
   - component: {fileID: 714152103}
+  - component: {fileID: 714152104}
   m_Layer: 5
   m_Name: Yellow
   m_TagString: Untagged
@@ -1396,6 +1397,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &714152104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714152101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474fa1b3ef536474d92dcf7045aadbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: f338ec3d321d71d7dbae81703722efdb, type: 2}
+  heldScore: {fileID: 647698998}
+  baseScore: {fileID: 195343173}
 --- !u!1 &734665970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863476697}
   - component: {fileID: 863476698}
+  - component: {fileID: 863476699}
   m_Layer: 5
   m_Name: Blue
   m_TagString: Untagged
@@ -1640,6 +1657,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &863476699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863476696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474fa1b3ef536474d92dcf7045aadbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 5d8bec4e9a0dafa7cb39c101c5a61130, type: 2}
+  heldScore: {fileID: 1788874829}
+  baseScore: {fileID: 1076985836}
 --- !u!1 &903795986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,6 +1682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 903795987}
   - component: {fileID: 903795988}
+  - component: {fileID: 903795989}
   m_Layer: 5
   m_Name: Purple
   m_TagString: Untagged
@@ -1701,6 +1734,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &903795989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903795986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474fa1b3ef536474d92dcf7045aadbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 6a0c46e870606738b9dd4a2fb6079968, type: 2}
+  heldScore: {fileID: 1256998928}
+  baseScore: {fileID: 234270100}
 --- !u!1 &1043169400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,6 +2411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513783066}
   - component: {fileID: 1513783067}
+  - component: {fileID: 1513783068}
   m_Layer: 5
   m_Name: Red
   m_TagString: Untagged
@@ -2414,6 +2463,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &1513783068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513783065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474fa1b3ef536474d92dcf7045aadbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 78d4f94ef1567535bad890331e8949b1, type: 2}
+  heldScore: {fileID: 1678847596}
+  baseScore: {fileID: 417379249}
 --- !u!1 &1678847594
 GameObject:
   m_ObjectHideFlags: 0
