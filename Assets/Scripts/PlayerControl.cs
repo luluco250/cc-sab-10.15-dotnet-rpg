@@ -18,6 +18,13 @@ public class PlayerControl : MonoBehaviour {
 	void Awake() =>
 		UpdateSheetColor();
 
+	void Start() {
+		foreach (var p in players) {
+			p.data.heldBitcoins = 0;
+			p.data.baseBitcoins = 0;
+		}
+	}
+
 	public void Execute() =>
 		StartCoroutine(SlowExecute());
 
@@ -26,19 +33,30 @@ public class PlayerControl : MonoBehaviour {
 
 		var player = players[currentPlayer];
 
-		CallDirection(player, direction1.GetDirection());
-		yield return new WaitForSeconds(moveDelay);
-
-		CallDirection(player, direction2.GetDirection());
-		yield return new WaitForSeconds(moveDelay);
-
-		CallDirection(player, direction3.GetDirection());
-		yield return new WaitForSeconds(moveDelay);
-
-		++player.data.baseBitcoins;
+		yield return PlayerAction(player, direction1);
+		yield return PlayerAction(player, direction2);
+		yield return PlayerAction(player, direction3);
 		
 		NextPlayer();
 		executeButton.SetActive(true);
+	}
+
+	IEnumerator PlayerAction(Player player, DirectionButton direction) {
+		CallDirection(player, direction.GetDirection());
+
+		if (
+			player.data.position == Vector2Int.zero &&
+			player.data.heldBitcoins < 3
+		) {
+			++player.data.heldBitcoins;
+		}
+
+		if (player.data.position == player.data.startPosition) {
+			player.data.baseBitcoins += player.data.heldBitcoins;
+			player.data.heldBitcoins = 0;
+		}
+
+		yield return new WaitForSeconds(moveDelay);
 	}
 
 	void NextPlayer() {
