@@ -15,7 +15,7 @@ public class Board : MonoBehaviour {
 
 	Cell[][] board = new Cell[7][];
 
-	void Start() {
+	void Awake() {
 		for (int i = 0; i < 7; ++i)
 			board[i] = new Cell[7];
 		
@@ -31,12 +31,16 @@ public class Board : MonoBehaviour {
 		board[3][3] = Cell.Mine;
 	}
 
+	public Cell GetCell(Vector2Int pos)
+		=> GetCell(pos.x, pos.y);
+	public void SetCell(Vector2Int pos, Cell type)
+		=> SetCell(pos.x, pos.y, type);
+
 	public Cell GetCell(int x, int y) {
-		return board[x][y];
+		return board[x + 3][y + 3];
 	}
-	public void SetCell(int x, int y, Cell type) {
-		board[x][y] = type;
-	}
+	public void SetCell(int x, int y, Cell type)
+		=> board[x + 3][y + 3] = type;
 
 	public bool MoveCell(int x1, int y1, int x2, int y2) {
 		// Verificar se a posição antiga está dentro do tabuleiro.
