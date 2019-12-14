@@ -13,6 +13,9 @@ public class Player : MonoBehaviour {
 
     void Start() {
         renderer.material.color = GetColorFromType(data.cellType);
+        
+        for (int i = 0; i < data.directions.Length; ++i)
+            data.directions[i] = Direction.Up;
     }
 
     void FixedUpdate() {
@@ -25,15 +28,15 @@ public class Player : MonoBehaviour {
             
     }
 
-    public static Color GetColorFromType(Board.Cell cellType) {
+    public static Color GetColorFromType(Cell cellType) {
         switch (cellType) {
-            case Board.Cell.PlayerBlue:
+            case Cell.PlayerBlue:
                 return Color.blue;
-            case Board.Cell.PlayerRed:
+            case Cell.PlayerRed:
                 return Color.red;
-            case Board.Cell.PlayerPurple:
+            case Cell.PlayerPurple:
                 return Color.magenta;
-            case Board.Cell.PlayerYellow:
+            case Cell.PlayerYellow:
                 return Color.yellow;
             default:
                 throw new Exception("No color for " + cellType);

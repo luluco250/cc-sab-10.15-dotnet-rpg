@@ -1,16 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class DirectionButton : MonoBehaviour {
-	public enum Direction {
-		Up = 0,
-		Right = 1,
-		Down = 2,
-		Left = 3,
-		None = 4
-	}
-
 	static readonly float[] DirectionAngles = new float[]{0, 270, 180, 90};
 
 	Direction direction = Direction.Up;
